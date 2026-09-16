@@ -1,0 +1,28 @@
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+
+# 로컬 전사용 Python 가상환경 (수백 MB — 커밋하지 않는다)
+.venv/
+__pycache__/
+*.pyc
+
+# 실제 녹음/전사 산출물은 커밋하지 않는다
+out/
+recordings/
+plaud-latest.json
+plaud-*.json
+*.mp3
+*.m4a
+*.wav
+*.opus
+*.aac
+*.flac
+!samples/*.json
+!samples/*.txt
+!samples/*.srt
+
+# 로컬 비밀값
+.env
+.env.*

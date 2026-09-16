@@ -1,0 +1,42 @@
+{
+  "name": "plaud-meeting-minutes",
+  "version": "0.1.0",
+  "description": "PLAUD Note Pro 녹음 → 회의록 마크다운 자동 생성 CLI (의존성 0, Node만 있으면 동작)",
+  "type": "module",
+  "bin": {
+    "plaud-minutes": "bin/cli.mjs",
+    "plaud-fetch": "scripts/plaud-mcp.mjs"
+  },
+  "main": "lib/index.mjs",
+  "exports": {
+    ".": "./lib/index.mjs",
+    "./normalize": "./lib/normalize.mjs",
+    "./render": "./lib/render.mjs",
+    "./naming": "./lib/naming.mjs"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "scripts",
+    "samples",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check bin/cli.mjs && node --check lib/normalize.mjs && node --check lib/render.mjs && node --check lib/naming.mjs && node --check lib/prompt.mjs && node --check lib/transcribe.mjs",
+    "setup": "node scripts/setup.mjs",
+    "minutes": "node bin/cli.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "plaud",
+    "meeting-minutes",
+    "transcript",
+    "mcp",
+    "whisper",
+    "회의록"
+  ],
+  "license": "MIT"
+}
